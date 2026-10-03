@@ -1,0 +1,22 @@
+{
+  "assets": [
+    {
+      "original_filename": "democracy-now/Democracy_Now__idRZQHHx7r_2.svg",
+      "shipped_path": "web/public/assets/democracy-now.svg",
+      "sha256": "44c3b14b57ecd64483d05b26304a7b8d79d6ab4b48bda0ce3deffb1f13f28c91",
+      "source": "Owner-supplied local main-checkout asset folder, inspected 2026-10-03",
+      "rights": "No separate license or public-release clearance supplied",
+      "usage": "Identity/attribution in the independent private archive viewer"
+    },
+    {
+      "original_filename": "democracy-now/Democracy_Now__idFXUaAy8W_3.png",
+      "shipped_path": "web/public/assets/amy-goodman.png",
+      "sha256": "ae3f48d73f9c44555a2841eb414eb4452c0f0ae1ea452e588aabaaf512c76e06",
+      "source": "Owner-supplied local main-checkout asset folder, inspected 2026-10-03",
+      "rights": "No separate license or public-release clearance supplied",
+      "usage": "Identity/attribution in the independent private archive viewer"
+    }
+  ],
+  "inspiration": [],
+  "code_license": "GPL-3.0; does not assign the software license to third-party identity assets"
+}
