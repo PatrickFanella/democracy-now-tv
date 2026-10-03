@@ -1,4 +1,4 @@
-ARG ENGINE_IMAGE=vhness-engine:9f6ad5b1fa3f20e2c3f063f30ed98d8d4a96b532
+ARG ENGINE_IMAGE=vhness-engine:1980c704e7495557c06fb9e6ac63e47ecc244dab
 FROM node:24-bookworm-slim AS frontend
 RUN npm install --global pnpm@10.33.0 --force
 WORKDIR /src/web

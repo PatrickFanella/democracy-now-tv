@@ -1,12 +1,12 @@
 {
   "repository": "https://git.subcult.tv/subculture-collective/VHNESS",
-  "revision": "9f6ad5b1fa3f20e2c3f063f30ed98d8d4a96b532",
+  "revision": "1980c704e7495557c06fb9e6ac63e47ecc244dab",
   "api_version": "1",
   "files": {
     "Player.tsx": "b5287867a09481c441209207ff1ec18581f535e159c7a51bc877cf1979a720cc",
     "model.ts": "5a3c91ea34f66ce84029f70b90a91ed685b551779ea7935468bad335bd147d3d",
     "model.test.ts": "e5726c4682d59d874a092e70795c12a4fda1b8707ee68c703d4d64f573994ad6",
-    "useViewer.ts": "2988117a8e48496972def91a8fd354724d008e04898488e86c49438c1c7323cf",
+    "useViewer.ts": "f04990808031abbdc5e7b0bd062e3e1958711465c4d6b2177d673750fe6fed5b",
     "Viewer.tsx": "d34e22e856b058a423e408887fbe9cd24b79e66dfc9914cdeb291dbf53d89a24",
     "Compatibility.tsx": "b3773f2039e270586726e0a3377a0210861c5b00cd53dbd0e0ff10ab37c22c6a"
   },
