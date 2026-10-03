@@ -1,9 +1,10 @@
 # Democracy Now! broadcast archive
 
 A standalone episode library and shared scheduled replay channel, built on the
-shared VHNESS engine. This repository owns its frontend, design system, assets,
-and deployment configuration. The viewer adapter and deployment helpers are
-pinned generated copies, verified against engine revision `1980c704e7495557c06fb9e6ac63e47ecc244dab`.
+shared Arkhiv engine. This repository owns its frontend, design system, assets,
+and deployment configuration. The published viewer package and immutable engine digest are pinned together in
+`deploy/platform-release.json` and `deploy/archive-engine.env`. Historical
+deployment helpers retain their original hash-verified provenance.
 
 Both on-demand playback and Tune in/Rejoin use the same reviewed content and
 source attribution. Viewer controls never change the shared schedule. Original
@@ -13,17 +14,18 @@ The design uses the supplied Democracy Now! vector logo and Amy Goodman photogra
 
 ## Verify and build
 
-Run `make verify` for adapter/tool/asset hashes, frozen dependencies,
+Run `make verify` for package/engine pins, tool/asset hashes, frozen dependencies,
 typecheck, lint, model tests, and production frontend build. Browser playback,
 audible fidelity, shared-channel drift, restore, and deployment remain distinct
 checks. Read `AGENTS.md` before changing generated code.
 
-Build the pinned engine image from its source first, or load its verified image
-archive. Then build this app:
+Set `NPM_CONFIG_USERCONFIG` to a private npm configuration outside this checkout.
+It must select the Gitea registry for `@subcult` and supply a package-read token.
+CI uses the repository secret `ARCHIVE_PACKAGE_READ_TOKEN`. Build this frontend
+over the released engine, then prepare a separately reviewed deployment:
 
 ```sh
-docker build --build-arg ENGINE_IMAGE=vhness-engine:1980c704e7495557c06fb9e6ac63e47ecc244dab \
-  -t democracy-now-tv:APP_SOURCE_SHA .
+python3 scripts/build_image.py --npmrc /absolute/private/npmrc --tag democracy-now-tv:APP_SOURCE_SHA
 python3 scripts/deploy.py prepare \
   --root ~/.local/state/video-archive/democracy-now-tv --project democracy-now-tv \
   --image democracy-now-tv:APP_SOURCE_SHA --collection democracy_now_vid --port 48072
