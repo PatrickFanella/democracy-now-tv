@@ -10,5 +10,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "24"
-      - run: npm install --global pnpm@10.33.0 --force
-      - run: make verify
+      - name: Verify with job-local pnpm
+        run: |
+          tool_dir=$(mktemp -d)
+          trap 'rm -rf "$tool_dir"' EXIT
+          npm install --prefix "$tool_dir" pnpm@10.33.0
+          PATH="$tool_dir/node_modules/.bin:$PATH" make verify
