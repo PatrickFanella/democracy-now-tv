@@ -4,3 +4,4 @@ web/dist
 output
 .playwright-cli
 .env
+**/.pnpm-store

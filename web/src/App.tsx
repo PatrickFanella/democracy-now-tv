@@ -1,6 +1,4 @@
-import { useViewer } from './engine/useViewer';
-import { Compatibility } from './engine/Compatibility';
-import { ChannelPanel, Library, Screen } from './engine/Viewer';
+import { useViewer, Compatibility, ChannelPanel, Library, Screen } from '@subcult/archive-viewer';
 import './base.css';
 import './styles.css';
 
