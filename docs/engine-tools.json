@@ -1,7 +1,7 @@
 {
   "repository": "https://git.subcult.tv/subculture-collective/VHNESS",
-  "revision": "2b17e4eaa29bd660205ccf6b30d13832b9c8f833",
-  "image": "vhness-engine:2b17e4eaa29bd660205ccf6b30d13832b9c8f833",
+  "revision": "9f6ad5b1fa3f20e2c3f063f30ed98d8d4a96b532",
+  "image": "vhness-engine:9f6ad5b1fa3f20e2c3f063f30ed98d8d4a96b532",
   "files": {
     "scripts/deploy.py": "2c5f830a82a8d6c62d57d986b4cd837c536be0f549adc43ecb84865ae9559645",
     "deploy/compose.yml": "47b2c8d3519da2925bf0969c6095c0f3a3acee8432e446032dbe39518f661adc",

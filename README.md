@@ -3,7 +3,7 @@
 A standalone episode library and shared scheduled replay channel, built on the
 shared VHNESS engine. This repository owns its frontend, design system, assets,
 and deployment configuration. The viewer adapter and deployment helpers are
-pinned generated copies, verified against engine revision `2b17e4eaa29bd660205ccf6b30d13832b9c8f833`.
+pinned generated copies, verified against engine revision `9f6ad5b1fa3f20e2c3f063f30ed98d8d4a96b532`.
 
 Both on-demand playback and Tune in/Rejoin use the same reviewed content and
 source attribution. Viewer controls never change the shared schedule. Original
@@ -22,7 +22,7 @@ Build the pinned engine image from its source first, or load its verified image
 archive. Then build this app:
 
 ```sh
-docker build --build-arg ENGINE_IMAGE=vhness-engine:2b17e4eaa29bd660205ccf6b30d13832b9c8f833 \
+docker build --build-arg ENGINE_IMAGE=vhness-engine:9f6ad5b1fa3f20e2c3f063f30ed98d8d4a96b532 \
   -t democracy-now-tv:APP_SOURCE_SHA .
 python3 scripts/deploy.py prepare \
   --root ~/.local/state/video-archive/democracy-now-tv --project democracy-now-tv \
