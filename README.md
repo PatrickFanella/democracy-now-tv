@@ -41,3 +41,9 @@ See [engine deployment operations](docs/engine-deployment.md) for source refresh
 ## Assets and software license
 
 This is an independent archive viewer, not an assertion of official affiliation. [Asset provenance](docs/asset-provenance.json) records supplied filenames and hashes. Software follows the engine's GPL-3.0 license; third-party logos, photography, and inspiration retain their separate provenance and are not assigned that software license. Public-release clearance remains separate. Runtime media, metadata snapshots, secrets, and generated evidence stay outside Git.
+
+## Public core deployment
+
+The public site is live at https://democracy-now.subcult.tv/. The frontend remains
+owned here; the independently released headless core has its own reviewed update
+pin. See [public deployment and updates](docs/public-core-deployment.md).
