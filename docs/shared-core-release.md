@@ -24,3 +24,17 @@ preserve newer production writes before selecting any earlier snapshot.
 
 Public deployment follows the separate recorded owner decision. Publishing a
 release or merging a pin is separate from changing the live API.
+
+The independent deployment uses `deploy/core-compose.yml` and the frontend-only
+`deploy/frontend.Dockerfile`. Set `FRONTEND_IMAGE`, `COLLECTION`, `MEDIA_ROOT`,
+`SECRET_ROOT`, and `NPMRC_FILE`; the package configuration must stay outside the
+checkout and is mounted only as a build secret. The secret directory contains
+`database-password`, a SELECT-only `database-url`, and the separate migration
+`operator-database-url`. Use an independently restored database before serving.
+Bill Nye uses its verified local media root; Democracy Now! uses an empty root.
+
+Load the API pin with `--env-file deploy/archive-core.env`, build the web service,
+run the operator profile's migration command, and qualify web/API before rollout.
+The API image and frontend image are separate services. A compatible API digest
+upgrade uses the existing frontend image; a viewer dependency upgrade rebuilds
+only the frontend. The original bundled Compose file remains a rollback option.
