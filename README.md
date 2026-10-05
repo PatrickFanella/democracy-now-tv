@@ -47,3 +47,6 @@ This is an independent archive viewer, not an assertion of official affiliation.
 The public site is live at https://democracy-now.subcult.tv/. The frontend remains
 owned here; the independently released headless core has its own reviewed update
 pin. See [public deployment and updates](docs/public-core-deployment.md).
+
+The independent engine release and upgrade procedure is documented in
+[Shared engine release](docs/shared-core-release.md).
