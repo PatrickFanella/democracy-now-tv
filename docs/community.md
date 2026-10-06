@@ -42,8 +42,8 @@ Sharing offers the native browser sheet, a copyable link, email and the document
 
 ## Release qualification
 
-This branch pins published `@subcult/archive-viewer@0.3.0` and core `0.2.0`
-from Arkhiv commit `929401fdd693ece1ae5d38c8c4c035bcb3712dd8`, with registry
+This branch pins published `@subcult/archive-viewer@0.3.1` and core `0.2.1`
+from Arkhiv commit `7f5c2484a77df79d2f17bda12b053724aeb34541`, with registry
 integrity and immutable image receipts. The repository's full `make verify`
 passed in an isolated T3 snapshot. The optional Compose overlay rendered without
 starting services. Hosted CI and remaining browser qualification are outstanding;
