@@ -9,7 +9,9 @@ assert re.fullmatch(r"[0-9a-f]{40}",release["source_revision"])
 assert re.fullmatch(r"git\.subcult\.tv/subculture-collective/archive-engine@sha256:[0-9a-f]{64}",release["engine_digest"])
 assert (repo/"deploy/archive-engine.env").read_text()=="ARCHIVE_ENGINE_IMAGE="+release["engine_digest"]+"\n"
 package=json.loads((repo/"web/package.json").read_text())
-assert package["dependencies"][release["package"]]==release["version"]
+viewer=json.loads((repo/"deploy/viewer-release.json").read_text())
+assert package["dependencies"][release["package"]]==viewer["version"]
+assert viewer["package"]==release["package"]
 assert not (repo/"web/src/engine").exists(),"Legacy adapter is still present"
 print("Shared package and immutable engine pins verified:",release["version"],release["source_revision"])
 tools=json.loads((repo/"docs/engine-tools.json").read_text())
