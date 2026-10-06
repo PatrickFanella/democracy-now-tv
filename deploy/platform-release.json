@@ -29,14 +29,15 @@
     "./print",
     "./audio"
   ],
-  "source_revision": "7f5c2484a77df79d2f17bda12b053724aeb34541",
-  "version": "0.3.1",
+  "source_revision": "39a49fb45005b001e14218823c22ed19c3de1177",
+  "version": "0.4.0",
   "license": "GPL-3.0-only",
-  "package_sha256": "b7c7a6c4a34d77a2febfd2239946fd83de5e5b8aae3bee49edb5a034bff660b6",
-  "package_file": "subcult-archive-viewer-0.3.1.tgz",
-  "engine_digest": "git.subcult.tv/subculture-collective/archive-engine@sha256:162d7d034a8fb4d5b0ac0f2a102b505147da6c4cf878ceaaf84429c3f2883641",
+  "package_sha256": "45ab98970b6f246e370ae26fbd7abb31b0077519b90878f353d0ae74f05ec501",
+  "package_file": "subcult-archive-viewer-0.4.0.tgz",
+  "engine_digest": "git.subcult.tv/subculture-collective/archive-engine@sha256:5651c73c0f35d93b392f8ddea7660cb4d891043e124d67fc0e7fc3da1b5f905b",
   "optional_migrations": {
-    "community/0001_personal_chat.sql": "718cc0d07c225d3743c2890bded533bf82fb4866a23b94932faf88c56a619c32"
+    "community/0001_personal_chat.sql": "718cc0d07c225d3743c2890bded533bf82fb4866a23b94932faf88c56a619c32",
+    "community/0002_media_rooms.sql": "1816b036ed8fdd9fa2c6e5a608b836eabfaea9677e57e33df351e7ab708f7990"
   },
   "migrations": {
     "0001_metadata.sql": "a4db4802a66764c56b3a77c128b27e608b1f3a5767f3482464700b9bbe744537",

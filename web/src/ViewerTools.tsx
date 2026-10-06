@@ -112,3 +112,18 @@ export function ChatPanel({ chat, personal, viewer }: { chat: ChannelChat; perso
   </section>;
 }
 export { usePersonal, useChannelChat };
+
+function readLibraryLayout(key: string): 'grid' | 'table' {
+  try { return localStorage.getItem(key) === 'table' ? 'table' : 'grid'; }
+  catch { return 'grid'; }
+}
+export function useLibraryLayout(collection: string) {
+  const key = `archive-library-layout:v1:${collection}`;
+  const [layout, update] = useState<'grid' | 'table'>(() => readLibraryLayout(key));
+  useEffect(() => { update(readLibraryLayout(key)); }, [key]);
+  const setLayout = (next: 'grid' | 'table') => {
+    update(next);
+    try { localStorage.setItem(key, next); } catch { /* Keep the current view in memory. */ }
+  };
+  return [layout, setLayout] as const;
+}
