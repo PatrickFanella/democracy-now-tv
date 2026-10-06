@@ -37,3 +37,36 @@ also retains newer pending edits across remounts. This adoption requires the
 updated consumer frozen-lock gate; it changes no live deployment.
 
 The complete consumer make verify passed with SDK 0.4.1 and this frozen registry lock. Native print integrations used disposable PostgreSQL 15 matching the dump client. Frontend receipt verification is independent of the retained core and reference-engine image receipts.
+
+## Volume preference browser qualification
+
+The October 6 independently built bundle restored origin-wide volume 0.30 and mute=true in the actual T3 browser against generated fixture playback. Bill Nye additionally retained those values across channel boundaries, channel/on-demand switches, two episodes, reload and keyboard slider changes. Template qualified invalid-value fallback, denied storage remount and controlled autoplay denial/manual retry. See Arkhiv `docs/reports/volume-qualification-2026-10-06.md`; #108 still owns suspension/drift qualification. Production collection constants and deployment remain unchanged.
+
+## Artwork component adoption
+
+The independently built bundle decoded the retained Bill Nye shared source thumbnail to 192 × 141 pixels in both library cards, showing `Series artwork` and preserving accessible episode action names. This used an explicitly identified browser-only image projection onto generated fixture records; no backend artwork decision, media acquisition or live product deployment occurred. The reference viewer additionally qualified actual source-image failure with text/date fallback. See Arkhiv `docs/reports/artwork-qualification-2026-10-06.md`.
+
+## Unreadable-response patch
+
+Viewer 0.4.2 replaces raw JSON parser errors with retryable archive messages
+for video requests and print/audio catalog responses. Structured source errors
+and caller cancellation remain intact. Its independent SDK receipt is in
+deploy/viewer-release.json; Core 0.3.0 and engine 0.4.0 remain pinned separately.
+Source gates and current registry locks are required for this adoption.
+
+SDK 0.4.2 adoption gate passed: `make verify` with this exact frozen registry
+lock, independent receipt checks, and disposable database integration where
+required. Native repositories used their own `arkhiv`/`dedhed` profile and
+worktree; the three headless video consumers used separate copied source roots
+in the disposable `vhness` test environment. Hosted CI remains owner-waived.
+
+## Library acceptance
+
+The shared library qualification report covers independently built copies of
+all three video products: combined scoped filters and explicit empty results,
+safe available metadata, retained/removable unavailable favorites, rejected
+favorite writes, restored table preference, keyboard switching, 390 CSS-pixel
+layouts, and HTML-outage recovery with SDK 0.4.2. Shared integration proves
+filters before pagination and public boundaries; the two-row browser fixture
+proves interaction only. See Arkhiv docs/reports/library-qualification-2026-10-06.md.
+Playback, actual devices, synchronized accounts and chat remain separate issues.
