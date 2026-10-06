@@ -29,12 +29,12 @@
     "./print",
     "./audio"
   ],
-  "source_revision": "929401fdd693ece1ae5d38c8c4c035bcb3712dd8",
-  "version": "0.3.0",
+  "source_revision": "7f5c2484a77df79d2f17bda12b053724aeb34541",
+  "version": "0.3.1",
   "license": "GPL-3.0-only",
-  "package_sha256": "bece15ca5dc75cc708ca008bc61f9e9391cfdbcfafa6b3b66d2d37f07b85ae4a",
-  "package_file": "subcult-archive-viewer-0.3.0.tgz",
-  "engine_digest": "git.subcult.tv/subculture-collective/archive-engine@sha256:0be41a37126f1d72cd70d7bdb09f5e19a255e460f44228df43a71c349bb9dab1",
+  "package_sha256": "b7c7a6c4a34d77a2febfd2239946fd83de5e5b8aae3bee49edb5a034bff660b6",
+  "package_file": "subcult-archive-viewer-0.3.1.tgz",
+  "engine_digest": "git.subcult.tv/subculture-collective/archive-engine@sha256:162d7d034a8fb4d5b0ac0f2a102b505147da6c4cf878ceaaf84429c3f2883641",
   "optional_migrations": {
     "community/0001_personal_chat.sql": "718cc0d07c225d3743c2890bded533bf82fb4866a23b94932faf88c56a619c32"
   },
