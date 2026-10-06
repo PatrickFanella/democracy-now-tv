@@ -1,0 +1,41 @@
+# Opt-in overlay for the reviewed API-only core deployment.
+# Provision the personal database and restricted roles before starting services.
+services:
+  api:
+    environment:
+      ARKHIV_COMMUNITY_CONFIG_FILE: /run/secrets/community-config
+    secrets: [community-config, personal-runtime-url, assertion-public]
+    volumes:
+      - "${PERSONAL_RECOVERY_ROOT:?Set independently retained private recovery storage}:/independent-recovery:rw"
+  session:
+    image: ${ARCHIVE_ENGINE_IMAGE:?Load the qualified core release}
+    command: [serve-session]
+    environment:
+      ARKHIV_SESSION_CONFIG_FILE: /run/secrets/session-config
+      SESSION_ADDR: 0.0.0.0:8081
+      API_ADDR: 0.0.0.0:8081
+    secrets: [session-config, personal-runtime-url, assertion-private, oidc-client]
+    read_only: true
+    tmpfs: [/tmp:size=16m]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 256m
+    cpus: 1
+    restart: unless-stopped
+  web:
+    depends_on: [api, session]
+    volumes:
+      - "./community-nginx.conf:/etc/nginx/nginx.conf:ro"
+secrets:
+  community-config:
+    file: ${SECRET_ROOT:?Set the private secret directory}/community-config.json
+  session-config:
+    file: ${SECRET_ROOT:?Set the private secret directory}/session-config.json
+  personal-runtime-url:
+    file: ${SECRET_ROOT:?Set the private secret directory}/personal-runtime-url
+  assertion-public:
+    file: ${SECRET_ROOT:?Set the private secret directory}/assertion-public.pem
+  assertion-private:
+    file: ${SECRET_ROOT:?Set the private secret directory}/assertion-private.pem
+  oidc-client:
+    file: ${SECRET_ROOT:?Set the private secret directory}/oidc-client
