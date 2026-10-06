@@ -59,3 +59,14 @@ lock, independent receipt checks, and disposable database integration where
 required. Native repositories used their own `arkhiv`/`dedhed` profile and
 worktree; the three headless video consumers used separate copied source roots
 in the disposable `vhness` test environment. Hosted CI remains owner-waived.
+
+## Library acceptance
+
+The shared library qualification report covers independently built copies of
+all three video products: combined scoped filters and explicit empty results,
+safe available metadata, retained/removable unavailable favorites, rejected
+favorite writes, restored table preference, keyboard switching, 390 CSS-pixel
+layouts, and HTML-outage recovery with SDK 0.4.2. Shared integration proves
+filters before pagination and public boundaries; the two-row browser fixture
+proves interaction only. See Arkhiv docs/reports/library-qualification-2026-10-06.md.
+Playback, actual devices, synchronized accounts and chat remain separate issues.
