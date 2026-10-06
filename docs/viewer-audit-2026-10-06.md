@@ -37,3 +37,7 @@ also retains newer pending edits across remounts. This adoption requires the
 updated consumer frozen-lock gate; it changes no live deployment.
 
 The complete consumer make verify passed with SDK 0.4.1 and this frozen registry lock. Native print integrations used disposable PostgreSQL 15 matching the dump client. Frontend receipt verification is independent of the retained core and reference-engine image receipts.
+
+## Volume preference browser qualification
+
+The October 6 independently built bundle restored origin-wide volume 0.30 and mute=true in the actual T3 browser against generated fixture playback. Bill Nye additionally retained those values across channel boundaries, channel/on-demand switches, two episodes, reload and keyboard slider changes. Template qualified invalid-value fallback, denied storage remount and controlled autoplay denial/manual retry. See Arkhiv `docs/reports/volume-qualification-2026-10-06.md`; #108 still owns suspension/drift qualification. Production collection constants and deployment remain unchanged.
