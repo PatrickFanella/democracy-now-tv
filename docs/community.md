@@ -48,3 +48,9 @@ integrity and immutable image receipts. The repository's full `make verify`
 passed in an isolated T3 snapshot. The optional Compose overlay rendered without
 starting services. Hosted CI and remaining browser qualification are outstanding;
 these checks do not activate a provider or deploy the product publicly.
+
+The owner subsequently waived hosted CI for this viewer PR while Kvant is down.
+Local verification remains required and passed. Remaining browser qualification
+still applies. `[skip ci]` in the PR title suppresses PR runs; push commits also
+need that marker during the outage. The owner will cancel queued runs in the UI.
+Remove skip markers and rerun hosted CI when a compatible runner returns.
