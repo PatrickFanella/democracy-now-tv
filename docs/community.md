@@ -39,3 +39,12 @@ backups and 90 days for opaque deletion evidence. Qualify these operations and
 restore suppression before any public activation.
 
 Sharing offers the native browser sheet, a copyable link, email and the documented [Bluesky compose intent](https://bsky.network/docs/intent-links/). Opening an intent leaves posting confirmation to the user.
+
+## Release qualification
+
+This branch pins published `@subcult/archive-viewer@0.3.0` and core `0.2.0`
+from Arkhiv commit `929401fdd693ece1ae5d38c8c4c035bcb3712dd8`, with registry
+integrity and immutable image receipts. The repository's full `make verify`
+passed in an isolated T3 snapshot. The optional Compose overlay rendered without
+starting services. Hosted CI and remaining browser qualification are outstanding;
+these checks do not activate a provider or deploy the product publicly.

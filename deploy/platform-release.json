@@ -19,7 +19,9 @@
     "catalog": "1",
     "print": "1",
     "audio": "1",
-    "video": "1"
+    "video": "1",
+    "personal": "1",
+    "chat": "1"
   },
   "package_entries": [
     ".",
@@ -27,12 +29,15 @@
     "./print",
     "./audio"
   ],
-  "source_revision": "e171f26a66cf00c0ac46384e987701d73ec57aca",
-  "version": "0.2.3",
+  "source_revision": "929401fdd693ece1ae5d38c8c4c035bcb3712dd8",
+  "version": "0.3.0",
   "license": "GPL-3.0-only",
-  "package_sha256": "f6efc95e906c2e80770e1c75614cf132d233c621fd5d3ab716be21146c2cc82e",
-  "package_file": "subcult-archive-viewer-0.2.3.tgz",
-  "engine_digest": "git.subcult.tv/subculture-collective/archive-engine@sha256:5d727ee190d4660ba27e0e6e94d5b3a0ce238afd63e7bb8302e7ec6f6764623c",
+  "package_sha256": "bece15ca5dc75cc708ca008bc61f9e9391cfdbcfafa6b3b66d2d37f07b85ae4a",
+  "package_file": "subcult-archive-viewer-0.3.0.tgz",
+  "engine_digest": "git.subcult.tv/subculture-collective/archive-engine@sha256:0be41a37126f1d72cd70d7bdb09f5e19a255e460f44228df43a71c349bb9dab1",
+  "optional_migrations": {
+    "community/0001_personal_chat.sql": "718cc0d07c225d3743c2890bded533bf82fb4866a23b94932faf88c56a619c32"
+  },
   "migrations": {
     "0001_metadata.sql": "a4db4802a66764c56b3a77c128b27e608b1f3a5767f3482464700b9bbe744537",
     "0002_local_preservation.sql": "cbe2dda6e3a5b20db392bf63269faaaa08f6f44550ea7f0831b229eba9b7a3e2",
