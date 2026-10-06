@@ -37,3 +37,5 @@ and separately authorized moderator withdrawal/restriction controls are included
 The accepted retention periods are 30 days for discussion, 35 days for personal
 backups and 90 days for opaque deletion evidence. Qualify these operations and
 restore suppression before any public activation.
+
+Sharing offers the native browser sheet, a copyable link, email and the documented [Bluesky compose intent](https://bsky.network/docs/intent-links/). Opening an intent leaves posting confirmation to the user.
