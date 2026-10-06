@@ -45,3 +45,17 @@ The October 6 independently built bundle restored origin-wide volume 0.30 and mu
 ## Artwork component adoption
 
 The independently built bundle decoded the retained Bill Nye shared source thumbnail to 192 × 141 pixels in both library cards, showing `Series artwork` and preserving accessible episode action names. This used an explicitly identified browser-only image projection onto generated fixture records; no backend artwork decision, media acquisition or live product deployment occurred. The reference viewer additionally qualified actual source-image failure with text/date fallback. See Arkhiv `docs/reports/artwork-qualification-2026-10-06.md`.
+
+## Unreadable-response patch
+
+Viewer 0.4.2 replaces raw JSON parser errors with retryable archive messages
+for video requests and print/audio catalog responses. Structured source errors
+and caller cancellation remain intact. Its independent SDK receipt is in
+deploy/viewer-release.json; Core 0.3.0 and engine 0.4.0 remain pinned separately.
+Source gates and current registry locks are required for this adoption.
+
+SDK 0.4.2 adoption gate passed: `make verify` with this exact frozen registry
+lock, independent receipt checks, and disposable database integration where
+required. Native repositories used their own `arkhiv`/`dedhed` profile and
+worktree; the three headless video consumers used separate copied source roots
+in the disposable `vhness` test environment. Hosted CI remains owner-waived.
