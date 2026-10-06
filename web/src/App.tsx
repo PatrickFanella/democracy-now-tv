@@ -1,13 +1,13 @@
 import { useViewer, Compatibility, ChannelPanel, Library, Screen } from '@subcult/archive-viewer';
 import { useState } from 'react';
-import { AccountPanel, ChatPanel, FavoriteAction, FavoriteShelf, VideoTools, useChannelChat, usePersonal, useTheater, useViewerLinks } from './ViewerTools';
+import { AccountPanel, ChatPanel, FavoriteAction, FavoriteShelf, VideoTools, useChannelChat, usePersonal, useTheater, useViewerLinks, useLibraryLayout } from './ViewerTools';
 import './base.css';
 import './styles.css';
 
 function Archive() {
   const viewer = useViewer('democracy_now_vid');
   const { theater, setTheater } = useTheater();
-  const [layout, setLayout] = useState<'grid' | 'table'>('grid');
+  const [layout, setLayout] = useLibraryLayout('democracy_now_vid');
   const [savedOnly, setSavedOnly] = useState(false);
   const personal = usePersonal('democracy_now_vid');
   const chat = useChannelChat('democracy_now_vid', viewer.session, viewer.paused, personal);

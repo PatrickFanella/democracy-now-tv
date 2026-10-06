@@ -22,12 +22,13 @@ def main():
         raise SystemExit('Build the committed reviewed consumer source')
     subprocess.run(['python3', 'scripts/check_engine.py'], cwd=root, check=True)
     release = json.loads((root / 'deploy/platform-release.json').read_text())
+    viewer = json.loads((root / 'deploy/viewer-release.json').read_text())
     revision = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root, text=True).strip()
     subprocess.run(['docker', 'build', '--build-arg', 'ENGINE_IMAGE=' + release['engine_digest'],
                     '--secret', 'id=npmrc,src=' + str(config),
                     '--label', 'org.opencontainers.image.revision=' + revision,
                     '--label', 'org.subcult.archive-engine=' + release['engine_digest'],
-                    '--label', 'org.subcult.archive-viewer=' + release['version'],
+                    '--label', 'org.subcult.archive-viewer=' + viewer['version'],
                     '-t', args.tag, '.'], cwd=root, check=True)
     print('Consumer image:', subprocess.check_output(['docker', 'image', 'inspect', '--format', '{{.Id}}', args.tag], text=True).strip())
 

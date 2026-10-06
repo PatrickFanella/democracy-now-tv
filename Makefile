@@ -10,3 +10,8 @@ verify: verify-core-pin
 .PHONY: verify-core-pin
 verify-core-pin:
 	python3 scripts/check_core_pin.py
+
+.PHONY: verify-viewer-pin
+verify: verify-viewer-pin
+verify-viewer-pin:
+	python3 scripts/check_viewer_pin.py
