@@ -34,3 +34,50 @@ main { max-width:1460px; padding:0 4.5vw; }
 footer strong { color:var(--ink); font-family:Georgia,serif; font-size:1.1rem; }
 @media(max-width:1000px) { .edition { display:none; } .screen-layout { gap:1.5rem; grid-template-columns:minmax(0,1fr) 250px; } }
 @media(max-width:700px) { .masthead { min-height:135px; gap:1rem; } .brand img { width:140px; } .masthead nav { flex-direction:column; font-size:.75rem; gap:.6rem; } .archive-bar { font-size:.5rem; line-height:1.5; } .archive-bar span:last-child { text-align:right; } .screen-layout { grid-template-columns:1fr; } .photo img { aspect-ratio:16/9; } .news-intro h1 { font-size:2.8rem; } .shelf h2 { font-size:2rem; } }
+
+/* Consumer-owned viewing and personal controls use this product's palette. */
+.viewer-tools, .library-toolbar, .channel-controls, .message-actions { display: flex; align-items: center; flex-wrap: wrap; gap: .65rem; }
+.viewer-tools { padding: 1rem 0; }
+.viewer-tools a { color: var(--accent); }
+.viewer-tools label { flex: 1 1 20rem; }
+.library-toolbar { margin: 1.5rem 0 1rem; }
+button[aria-pressed="true"] { outline: 2px solid var(--accent); outline-offset: 2px; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.episode-art { position: relative; overflow: hidden; }
+.episode-art img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.series-label { position: absolute; bottom: .35rem; left: .35rem; background: var(--background); color: var(--ink); padding: .2rem .4rem; font-size: .75rem; }
+.episode-metadata { display: grid; grid-template-columns: minmax(6rem, auto) 1fr; gap: .35rem 1rem; font-size: .9rem; overflow-wrap: anywhere; }
+.episode-metadata dt { color: var(--muted); }
+.episode-metadata dd { margin: 0; }
+.metadata-filters { display: flex; flex-wrap: wrap; gap: .75rem; padding: 1rem 0; }
+.metadata-filters label { flex: 1 1 10rem; }
+.episode-table-wrap { overflow-x: auto; }
+.episode-table { width: 100%; border-collapse: collapse; text-align: left; }
+.episode-table th, .episode-table td { border-bottom: 1px solid var(--border); padding: .8rem; vertical-align: top; }
+.episode-table caption { text-align: left; padding: .75rem 0; font-weight: bold; }
+.account-panel, .chat-panel { border-top: 1px solid var(--border); margin-top: 2rem; padding-top: 1.5rem; }
+.account-panel button, .chat-panel button { margin: .25rem .35rem .25rem 0; }
+.account-panel details, .chat-panel details { margin: 1rem 0; }
+.account-panel summary, .chat-panel summary { cursor: pointer; padding: .5rem 0; }
+.account-panel label, .chat-panel label { display: block; margin: .75rem 0; }
+.account-panel input:not([type="checkbox"]), .chat-panel input, .chat-panel textarea, .chat-panel select, .viewer-tools input { width: 100%; box-sizing: border-box; color: var(--ink); background: var(--background); border: 1px solid var(--border); border-radius: .25rem; padding: .65rem; font: inherit; }
+.chat-panel textarea { min-height: 5rem; resize: vertical; }
+.retention-note { color: var(--muted); font-size: .85rem; line-height: 1.5; }
+.chat-messages { list-style: none; margin: 0; padding: 0; }
+.chat-messages li { border-bottom: 1px solid var(--border); padding: 1rem 0; }
+.chat-messages p { white-space: pre-wrap; overflow-wrap: anywhere; }
+.chat-messages time { color: var(--muted); font-size: .8rem; }
+.chat-program { color: var(--muted); font-size: .85rem; border-left: 3px solid var(--accent); padding-left: .75rem; }
+.favorite-shelf nav, .chat-panel nav { display: flex; gap: 1rem; align-items: center; margin-top: 1rem; }
+.favorite-list article { display: grid; grid-template-columns: 8rem 1fr; gap: .5rem 1rem; border-bottom: 1px solid var(--border); padding: 1rem 0; }
+.favorite-list .episode-art { grid-row: span 4; aspect-ratio: 4 / 3; }
+.favorite-list h3, .favorite-list dl { margin: 0; }
+.is-theater { max-width: 100%; }
+.is-theater .viewer-layout { grid-template-columns: minmax(0, 1fr); }
+.is-theater .channel-panel { display: none; }
+.is-theater .screen { width: 100%; }
+@media (max-width: 640px) { .episode-table th, .episode-table td { padding: .5rem; } .episode-metadata { grid-template-columns: 1fr; gap: .2rem; } .episode-metadata dd { margin-bottom: .5rem; } .viewer-tools > button { flex: 1 1 auto; } }
+
+.episode-metadata > div { min-width: 0; }
+.is-theater .screen-layout { grid-template-columns: minmax(0, 1fr); }
+.is-theater .channel { display: none; }
