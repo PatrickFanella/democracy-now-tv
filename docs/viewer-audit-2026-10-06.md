@@ -41,3 +41,7 @@ The complete consumer make verify passed with SDK 0.4.1 and this frozen registry
 ## Volume preference browser qualification
 
 The October 6 independently built bundle restored origin-wide volume 0.30 and mute=true in the actual T3 browser against generated fixture playback. Bill Nye additionally retained those values across channel boundaries, channel/on-demand switches, two episodes, reload and keyboard slider changes. Template qualified invalid-value fallback, denied storage remount and controlled autoplay denial/manual retry. See Arkhiv `docs/reports/volume-qualification-2026-10-06.md`; #108 still owns suspension/drift qualification. Production collection constants and deployment remain unchanged.
+
+## Artwork component adoption
+
+The independently built bundle decoded the retained Bill Nye shared source thumbnail to 192 × 141 pixels in both library cards, showing `Series artwork` and preserving accessible episode action names. This used an explicitly identified browser-only image projection onto generated fixture records; no backend artwork decision, media acquisition or live product deployment occurred. The reference viewer additionally qualified actual source-image failure with text/date fallback. See Arkhiv `docs/reports/artwork-qualification-2026-10-06.md`.
