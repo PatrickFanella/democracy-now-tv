@@ -1,26 +1,23 @@
 name: verify
 on:
   push:
+    branches: [main]
   pull_request:
+permissions:
+  contents: read
+
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "24"
-      - name: Verify released dependencies with job-local credentials
-        env:
-          ARCHIVE_PACKAGE_READ_TOKEN: ${{ secrets.ARCHIVE_PACKAGE_READ_TOKEN }}
+      - name: Verify with job-local pnpm
         run: |
-          test -n "$ARCHIVE_PACKAGE_READ_TOKEN"
           tool_dir=$(mktemp -d)
-          auth_dir=$(mktemp -d)
-          trap 'rm -rf "$tool_dir" "$auth_dir"' EXIT
-          chmod 700 "$auth_dir"
-          printf '%s\n' '@subcult:registry=https://git.subcult.tv/api/packages/subculture-collective/npm/' '//git.subcult.tv/api/packages/subculture-collective/npm/:_authToken=${ARCHIVE_PACKAGE_READ_TOKEN}' > "$auth_dir/npmrc"
-          chmod 600 "$auth_dir/npmrc"
-          export NPM_CONFIG_USERCONFIG="$auth_dir/npmrc"
+          trap 'rm -rf "$tool_dir"' EXIT
           npm install --prefix "$tool_dir" pnpm@10.33.0
           PATH="$tool_dir/node_modules/.bin:$PATH" make verify
