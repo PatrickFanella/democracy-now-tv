@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://democracy-now.subcult.tv/sitemap.xml
